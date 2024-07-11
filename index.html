@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    #dataTable {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+</style>
+<body>
+
+    <input id="cari" type="text" placeholder="Masukkan NRA"> 
+    <button onclick="frontendCoconut()">Cari</button>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>NRA</th>
+                <th>Jurusan</th>
+                <th>Angkatan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="nama"></td>
+                <td id="nra"></td>
+                <td id="jurusan"></td>
+                <td id="angkatan"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+    function frontendCoconut() {
+        let input = document.getElementById('cari').value;
+        switch (input) {
+            case "12.23.003":
+                nama = "Arini Husain";
+                nra = "12.23.003";
+                jurusan = "Frontend";
+                angkatan = "012";
+            break; 
+             case "12.23.012":
+                nama = "Muliana";
+                nra = "12.23.003";
+                jurusan = "Frontend";
+                angkatan = "12";
+            break;
+              case "12.23.013":
+                nama = "Nabila Ismail Matta";
+                nra = "12.23.013";
+                jurusan = "Frontend";
+                angkatan = "12";
+            break;
+              case "12.23.014":
+                nama = "Fauzan Azhari Rahman";
+                nra = "12.23.014";
+                jurusan = "Frontend";
+                angkatan = "12";
+            break;
+            case "13.24.002":
+                nama = "Andi Arya Galang";
+                nra = "13.24.002";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+            case "13.24.003":
+                nama = "Rezky Amaliah Rusli";
+                nra = "13.24.003";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+            case "13.24.008":
+                nama = "Muhammad Syarif";
+                nra = "13.24.008";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+            case "13.24.009":
+                nama = "Yusuf Marcelino";
+                nra = "13.24.009";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+            case "13.24.016":
+                nama = "Mustika";
+                nra = "13.24.016";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+            case "13.24.017":
+                nama = "Windu Yoga Nugraha";
+                nra = "13.24.017";
+                jurusan = "Frontend";
+                angkatan = "013";
+            break;
+        default:
+            alert("Data FrontEnd Yang Anda Cari Tidak Ada");
+            break; 
+        }
+        document.getElementById('nama').textContent = nama;
+        document.getElementById('nra').textContent = nra;
+        document.getElementById('jurusan').textContent = jurusan;
+        document.getElementById('angkatan').textContent = angkatan;
+    }
+    </script>
+
+</body>
+</html>
